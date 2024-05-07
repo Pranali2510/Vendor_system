@@ -15,11 +15,9 @@ class Vendor(models.Model):
     fulfillment_rate = models.FloatField(blank=True, null=True)
 
     class Meta:
-        # managed = False
         db_table = 'vendor'
         unique_together = (('id', 'vendor_code'),)
     
-
 class HistoricalPerformance(models.Model):
     vendor = models.ForeignKey('Vendor', models.DO_NOTHING, db_column='vendor', to_field='vendor_code', blank=True, null=True)
     date = models.DateTimeField(blank=True, null=True)
@@ -27,11 +25,8 @@ class HistoricalPerformance(models.Model):
     quality_rating_avg = models.FloatField(blank=True, null=True)
     average_response_time = models.FloatField(blank=True, null=True)
     fulfillment_rate = models.FloatField(blank=True, null=True)
-
     class Meta:
-        # managed = False
         db_table = 'historical_performance'
-
 
 class PurchaseOrder(models.Model):
     po_number = models.CharField(max_length=50, unique=True)
@@ -45,12 +40,9 @@ class PurchaseOrder(models.Model):
     issue_date = models.DateTimeField()
     acknowledgment_date = models.DateTimeField(blank=True, null=True)
     po_deliverd_date =  models.DateTimeField(blank=True, null=True)
-
     class Meta:
-        # managed = False
         db_table = 'purchase_order'
         unique_together = (('id', 'po_number'),)
-
 
 @receiver(post_save, sender=PurchaseOrder)
 def vendor_performance_evaluate(sender, instance, **kwargs):
@@ -68,7 +60,6 @@ def vendor_performance_evaluate(sender, instance, **kwargs):
             else:
                 fulfillment_rate = 0.0
             instance.vendor.fulfillment_rate = fulfillment_rate
-
             if instance.quality_rating is not None:
                 quality_rating_df = completed_pos[completed_pos['quality_rating'].notna()]
                 count_quality_rating = len(quality_rating_df)
