@@ -29,32 +29,34 @@
     - python manage.py runserver
 
 Access the admin panel at http://127.0.0.1:8000/admin/ and use the superuser credentials to log in.
-API Endpoints
 
-Generate Token:
-    1. POST: /api/generate_token/: Generate access and refresh tokens for a vendor.
-    2. POST /api/token/refresh/: Refresh the access token.
+# API Endpoints
+1. Generate Token:
+    - POST: /api/generate_token/: Generate access and refresh tokens for a vendor.
+    - POST /api/token/refresh/: Refresh the access token.
 
-Vendor Profile:
-    1. POST /api/vendors/: Create a new vendor profile.
-    2. GET /api/vendors/: List all vendors.
-    3. GET /api/vendors/{vendor_id}/: Retrieve a specific vendor's details.
-    4. PUT /api/vendors/{vendor_id}/: Update a vendor's details.
-    5. DELETE /api/vendors/{vendor_id}/: Delete a vendor.
+2. Vendor Profile:
+    - POST /api/vendors/: Create a new vendor profile.
+    - GET /api/vendors/: List all vendors.
+    - GET /api/vendors/{vendor_id}/: Retrieve a specific vendor's details.
+    - PUT /api/vendors/{vendor_id}/: Update a vendor's details.
+    - DELETE /api/vendors/{vendor_id}/: Delete a vendor.
 
-Purchase Order:
-    1. POST /api/purchase_orders/: Create a new purchase order.
-    2. GET /api/purchase_orders/: List all purchase orders.
-    3. GET /api/purchase_orders/{po_number}: Retrieve a specific purchase order.
-    4. PUT /api/purchase_orders/{po_number}: Update a purchase order.
-    5. DELETE /api/purchase_orders/{po_number}: Delete a purchase order.
+3. Purchase Order:
+    - POST /api/purchase_orders/: Create a new purchase order.
+    - GET /api/purchase_orders/: List all purchase orders.
+    - GET /api/purchase_orders/{po_number}: Retrieve a specific purchase order.
+    - PUT /api/purchase_orders/{po_number}: Update a purchase order.
+    - DELETE /api/purchase_orders/{po_number}: Delete a purchase order.
 
-Acknowledge Purchase Order:
-    1.POST /api/purchase_orders/{po_number}/acknowledge: Acknowledge a purchase order.
+4. Acknowledge Purchase Order:
+    - POST /api/purchase_orders/{po_number}/acknowledge: Acknowledge a purchase order.
 
-Vendor Performance Metrics:
-    1. GET /api/vendors/{vendor_code}/performance: Retrieve vendor performance metrics.
+5. Vendor Performance Metrics:
+    - GET /api/vendors/{vendor_code}/performance: Retrieve vendor performance metrics.
 
-Note
-Ensure the virtual environment is activated whenever you work on the project.
-Customize the DATABASES configuration in settings.py according to your database setup
+# Note
+1. Use 3.9 or higher python version for this requirements.txt
+2. Ensure the virtual environment is activated whenever you work on the project.
+3. Customize the DATABASES configuration in settings.py according to your database setup.
+
