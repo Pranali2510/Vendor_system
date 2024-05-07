@@ -2,16 +2,16 @@
 
 # Setup
 1. Clone the repository:
-   git clone https://github.com/your-username/vendor-management-system.git
+   - git clone https://github.com/Pranali2510/vendor_system.git
 
 2. Create a virtual environment:
-    py -3 -m venv myenv
+    - py -3 -m venv myenv
 
 3. Activate the virtual environment:
-    myenv\Scripts\activate
+    - myenv\Scripts\activate
 
 4. Install dependencies:
-    pip install -r requirements.txt
+    - pip install -r requirements.txt
 
 5. Update database settings:
     Open vendor_manage_system/settings.py
@@ -19,13 +19,14 @@
 
 6. Running the Project
     Apply database migrations:
-    python manage.py migrate
+    - python manage.py makemigration
+    - python manage.py migrate
 
 7. Create a superuser:
-    python manage.py createsuperuser
+    - python manage.py createsuperuser
 
 8. Run the development server:
-    python manage.py runserver
+    - python manage.py runserver
 
 Access the admin panel at http://127.0.0.1:8000/admin/ and use the superuser credentials to log in.
 API Endpoints
@@ -44,9 +45,9 @@ Vendor Profile:
 Purchase Order:
     1. POST /api/purchase_orders/: Create a new purchase order.
     2. GET /api/purchase_orders/: List all purchase orders.
-    3. GET /api/purchase_orders/{po_number}/: Retrieve a specific purchase order.
-    4. PUT /api/purchase_orders/{po_number}/: Update a purchase order.
-    5. DELETE /api/purchase_orders/{po_number}/: Delete a purchase order.
+    3. GET /api/purchase_orders/{po_number}: Retrieve a specific purchase order.
+    4. PUT /api/purchase_orders/{po_number}: Update a purchase order.
+    5. DELETE /api/purchase_orders/{po_number}: Delete a purchase order.
 
 Acknowledge Purchase Order:
     1.POST /api/purchase_orders/{po_number}/acknowledge: Acknowledge a purchase order.
