@@ -1,0 +1,12 @@
+2024-05-07 16:51:53,701 This is an error message in pageName: views.py ,Method: vendor_profile_management Exception: Please provide values to update Vendor Profile and Type of error: None
+NoneType: None
+2024-05-07 16:51:53,701 Bad Request: /api/vendors/VP91ID68570/
+2024-05-07 16:52:27,446 This is an error message in pageName: views.py ,Method: vendor_profile_management Exception: Please provide values to update Vendor Profile and Type of error: None
+NoneType: None
+2024-05-07 16:52:27,452 Bad Request: /api/vendors/VP91ID68570/
+2024-05-07 16:52:41,925 This is an error message in pageName: views.py ,Method: vendor_profile_management Exception: vendor_code should be same as parameter pass in URL and Type of error: None
+NoneType: None
+2024-05-07 16:52:41,925 Bad Request: /api/vendors/VP91ID68570/
+2024-05-07 16:53:40,692 Not Found: /api/vendors/VP63ID23387/performance/
+2024-05-07 16:57:34,042 Unauthorized: /api/purchase_orders/PO81NO86458
+2024-05-07 18:57:06,453 C:\Users\pranali.mahajan\Documents\vendor_managment_system\vendor_manage_system\vendor_manage_system\settings.py changed, reloading.
