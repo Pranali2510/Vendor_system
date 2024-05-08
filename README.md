@@ -19,7 +19,7 @@
 
 6. Running the Project
     Apply database migrations:
-    - python manage.py makemigration
+    - python manage.py makemigrations
     - python manage.py migrate
 
 7. Create a superuser:
